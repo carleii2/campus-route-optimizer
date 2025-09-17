@@ -1,13 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Route Optimizer</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Route Optimizer</title>
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
-    <div id="app"></div>
-    <script src="src/app.js" type="module"></script>
+  <header>
+    <h1>Campus Route Optimizer (Vanilla JS)</h1>
+    <p>Trouvez le chemin le plus court entre deux points du campus</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label for="start">Point de départ</label>
+      <select id="start"></select>
+
+      <label for="end">Destination</label>
+      <select id="end"></select>
+
+      <button id="findBtn">Trouver le chemin</button>
+      <button id="resetBtn">Réinitialiser</button>
+
+      <div id="info" class="info"></div>
+    </section>
+
+    <section class="map">
+      <canvas id="campusCanvas" width="900" height="600"></canvas>
+      <div id="legend" class="legend">
+        <p><strong>Légende:</strong></p>
+        <div><span class="dot node"></span> Bâtiment / Salle</div>
+        <div><span class="line edge"></span> Chemin</div>
+        <div><span class="line path"></span> Chemin trouvé</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Données et scripts (ordre important) -->
+  <script src="../data/campus-graph.js"></script>
+  <script src="../src/dijkstra.js"></script>
+  <script src="../src/app.js"></script>
 </body>
 </html>

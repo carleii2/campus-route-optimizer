@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f7f7fb;
+    color: #222;
+}
+
+header {
+    padding: 18px;
+    background: #0b5fff;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.controls {
+    width: 300px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.controls label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.controls select,
+.controls button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+}
+
+.controls button {
+    cursor: pointer;
+    background: #0b5fff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.controls button#resetBtn {
+    background: #e0e0e0;
+    color: #222;
+    margin-top: 8px;
+}
+
+.info {
+    margin-top: 12px;
+    padding: 10px;
+    background: #f2f8ff;
+    border-radius: 6px;
+    font-size: 14px;
+    min-height: 48px;
+}
+
+.map {
+    flex: 1;
+    position: relative;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    display: block;
+}
+
+.legend {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.node {
+    background: #0b5fff;
+}
+
+.line {
+    display: inline-block;
+    width: 28px;
+    height: 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.edge {
+    background: #cfcfcf;
+}
+
+.path {
+    background: #ff6b00;
+}
